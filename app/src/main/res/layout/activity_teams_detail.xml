@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/custom_header"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.sportzinteractive.customviews.CustomTextView
+                  android:id="@+id/team_one"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:maxLines="2"
+                  android:gravity="center_vertical"
+                  android:text="@string/title_teams"
+                  android:textColor="@color/textColor"
+                  android:textSize="@dimen/_12ssp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toStartOf="@+id/team_two"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+
+              <com.sportzinteractive.customviews.CustomTextView
+                  android:id="@+id/team_two"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_5sdp"
+                  android:maxLines="2"
+                  android:gravity="center_vertical"
+                  android:text="@string/title_teams"
+                  android:textColor="@color/textColor"
+                  android:textSize="@dimen/_12ssp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintStart_toEndOf="@+id/team_one"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusableInTouchMode="true"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        android:paddingBottom="@dimen/_20dsp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/team_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recycler_view_two"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusableInTouchMode="true"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/team_one"
+        app:layout_constraintStart_toEndOf="@+id/recycler_view_one"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,83 @@
+<layout>
+
+    <androidx.cardview.widget.CardView
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:clipChildren="true"
+        android:outlineAmbientShadowColor="@color/textColor"
+        android:outlineSpotShadowColor="@color/textColor"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+
+            <com.sportzinteractive.customviews.CustomTextView
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.sportzinteractive.customviews.CustomTextView
+                android:id="@+id/item_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="2"
+                android:text="@string/date_time"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_venue"
+                app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+            <com.sportzinteractive.customviews.CustomTextView
+                android:id="@+id/item_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:maxLines="2"
+                android:text="@string/venue"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_datetime"
+                app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+
+            <com.sportzinteractive.customviews.CustomTextView
+                android:id="@+id/btn_navigate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/item_datetime" />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
