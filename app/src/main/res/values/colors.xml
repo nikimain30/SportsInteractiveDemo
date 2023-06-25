@@ -9,4 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">@color/black</color>
     <color name="colorBorderTab">#C5C5C6</color>
+
+    <color name="bg_action_bar">#2f333b</color>
+    <color name="bg_rowodd">#4D4A4A</color>
+    <color name="bg_roweven">#6F6A6A</color>
+    <color name="colorPrimary">#EE414141</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F31E1E</color>
+    <color name="com_facebook_button_background_color_focused_disabled">#530F1F</color>
+    <color name="com_facebook_button_background_color_disabled">#EE2655</color>
+    <color name="com_facebook_button_background_color_focused">#EE2655</color>
+    <color name="com_facebook_button_border_color_focused">#EE2655</color>
+    <color name="com_facebook_button_send_background_color_pressed">#EE2655</color>
+    <color name="com_facebook_button_send_background_color">#530F1F</color>
 </resources>

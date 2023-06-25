@@ -20,7 +20,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_8sdp">
+            android:background="#2f333b"
+            android:padding="@dimen/_10sdp">
 
 
             <com.sportzinteractive.customviews.CustomTextView
@@ -28,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/textColor"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +41,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:maxLines="2"
                 android:text="@string/date_time"
-                android:textColor="@color/textColor"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/item_venue"
@@ -53,7 +54,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:maxLines="2"
                 android:text="@string/venue"
-                android:textColor="@color/textColor"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_datetime"
@@ -64,12 +65,12 @@
                 android:id="@+id/btn_navigate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:text="@string/info"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16ssp"
+                android:textSize="@dimen/_12ssp"
                 android:gravity="center"
-                android:padding="5dp"
+                android:padding="@dimen/_5sdp"
                 android:background="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/item_datetime" />
 

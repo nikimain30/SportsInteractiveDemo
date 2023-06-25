@@ -1,69 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_image_matchcode"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/custom_header"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <include
+            android:id="@+id/header"
+            layout="@layout/custom_header"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/display_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/header" >
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_select_all"
+                android:text="Display All"
+                android:textColor="@color/white"
+                android:checked="true"
+                android:paddingLeft="@dimen/_5sdp"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_team_A"
+                android:text="Team A"
+                android:textColor="@color/white"
+                android:layout_marginLeft= "@dimen/_10sdp"
+                android:paddingLeft="@dimen/_5sdp"/>
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_team_B"
+                android:text="Team B"
+                android:textColor="@color/white"
+                android:layout_marginLeft= "@dimen/_10sdp"
+                android:paddingLeft="@dimen/_5sdp"/>
+
+
+        </LinearLayout>
+
+            <com.sportzinteractive.customviews.CustomTextView
+              android:id="@+id/team_one"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+                android:maxLines="2"
+               android:padding="@dimen/_5sdp"
+              android:gravity="center"
+              android:text="@string/title_teams"
+              android:textColor="@color/white"
+              android:textSize="@dimen/_16ssp"
+              android:background="@color/black"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/team_two"
+              app:layout_constraintTop_toBottomOf="@+id/display_list" />
+
 
         <com.sportzinteractive.customviews.CustomTextView
-                  android:id="@+id/team_one"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="@dimen/_5sdp"
-                  android:maxLines="2"
-                  android:gravity="center_vertical"
-                  android:text="@string/title_teams"
-                  android:textColor="@color/textColor"
-                  android:textSize="@dimen/_12ssp"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintEnd_toStartOf="@+id/team_two"
-                  app:layout_constraintTop_toTopOf="parent" />
+                      android:id="@+id/team_two"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:maxLines="2"
+                      android:padding="@dimen/_5sdp"
+                      android:gravity="center"
+                      android:text="@string/title_teams"
+                      android:background="@color/black"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/_16ssp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toEndOf="@+id/team_one"
+                      app:layout_constraintTop_toBottomOf="@+id/display_list"/>
 
 
-              <com.sportzinteractive.customviews.CustomTextView
-                  android:id="@+id/team_two"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="@dimen/_5sdp"
-                  android:maxLines="2"
-                  android:gravity="center_vertical"
-                  android:text="@string/title_teams"
-                  android:textColor="@color/textColor"
-                  android:textSize="@dimen/_12ssp"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintTop_toTopOf="parent"
-                  app:layout_constraintStart_toEndOf="@+id/team_one"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:focusableInTouchMode="true"
+            android:overScrollMode="never"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toBottomOf="@+id/team_one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recycler_view_two"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_one"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:focusableInTouchMode="true"
-        android:overScrollMode="never"
-        android:visibility="visible"
-        android:paddingBottom="@dimen/_20dsp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toBottomOf="@+id/team_one"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/recycler_view_two"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:focusableInTouchMode="true"
+            android:overScrollMode="never"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toBottomOf="@+id/team_two"
+            app:layout_constraintStart_toEndOf="@+id/recycler_view_one"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_two"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:focusableInTouchMode="true"
-        android:overScrollMode="never"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintTop_toBottomOf="@+id/team_one"
-        app:layout_constraintStart_toEndOf="@+id/recycler_view_one"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

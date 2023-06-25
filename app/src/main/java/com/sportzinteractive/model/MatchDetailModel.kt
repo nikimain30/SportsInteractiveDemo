@@ -1,11 +1,15 @@
 package com.sportzinteractive.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
+
 
 data class MatchDetailModel(
 
     @SerializedName("Matchdetail" ) var matchdetail : Matchdetail?       = Matchdetail()
-)
+) : Serializable
 {
     data class Matchdetail (
 

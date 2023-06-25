@@ -1,5 +1,6 @@
 package com.sportzinteractive.networking
 
+import com.sportzinteractive.model.MatchDetailModelV2
 import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -13,6 +14,6 @@ interface AppService {
     suspend fun getMatchDetail(
         @Url url: String,
         @Header("Content-Type") contentType: String? ="application/json"
-    ): ResponseBody
+    ): MatchDetailModelV2
 
 }

@@ -8,9 +8,9 @@
     <application
         android:name=".AppApplicationClass"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/worldcuplogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/worldcuplogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SportzInteractive">
         <activity
@@ -24,7 +24,6 @@
         </activity>
         <activity android:name=".activity.TeamsDetailActivity"
             android:exported="true">
-
         </activity>
 
     </application>

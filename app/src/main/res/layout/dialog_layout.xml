@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sportzinteractive.customviews.CustomTextView
+        android:id="@+id/batting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.sportzinteractive.customviews.CustomTextView
+        android:id="@+id/bowling"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/batting"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
